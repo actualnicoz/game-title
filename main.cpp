@@ -1,16 +1,14 @@
 #include "SDL.h"
+#include "renderer.h"
 
 int main(){
-
-  //TODO: Add error handling
-  SDL_Init(SDL_INIT_VIDEO);
-
-  //set the title
-  SDL_WM_SetCaption("Game Title", "Game Title");
-
-  //create a window
-  SDL_Surface* window = SDL_SetVideoMode(640, 480, 0, 0);
-
+  constexpr std::size_t kScreenWidth(640);
+  constexpr std::size_t kScreenHeight(640);
+  constexpr std::size_t kGridWidth(32);
+  constexpr std::size_t kGridHeight(32);
+  
+  Renderer renderer(kScreenWidth, kScreenHeight, kGridWidth, kGridHeight);
+  
   //create SDL event structure
   SDL_Event event;
   int gameOver = 0;
