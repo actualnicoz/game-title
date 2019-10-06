@@ -23,8 +23,5 @@ int main(){
       }
     }
   }
-
-  //clean up SDL
-  SDL_Quit();
   return 0;
 }

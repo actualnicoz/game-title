@@ -13,4 +13,11 @@ Renderer::Renderer(const std::size_t screen_width, const std::size_t screen_heig
   win = SDL_CreateWindow("Game Title", SDL_WINDOWPOS_CENTERED,
 			 SDL_WINDOWPOS_CENTERED, screen_width,
 			 screen_height, SDL_WINDOW_RESIZABLE);
+
+  renderer = SDL_CreateRenderer(win, -1, SDL_RENDERER_ACCELERATED);
+}
+
+Renderer::~Renderer(){
+  SDL_DestroyWindow(win);
+  SDL_Quit();
 }
