@@ -21,3 +21,8 @@ Renderer::~Renderer(){
   SDL_DestroyWindow(win);
   SDL_Quit();
 }
+
+void Renderer::UpdateWindowTitle(){
+  const char *title = "t";
+  SDL_SetWindowTitle(win, title);
+}
