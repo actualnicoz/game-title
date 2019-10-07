@@ -16,6 +16,8 @@ int main(){
   //game loop
   while(!gameOver){
     if(SDL_PollEvent(&event)){
+      //TODO: add score to window title
+      renderer.UpdateWindowTitle();
       switch(event.type){
       case SDL_QUIT:
 	gameOver = 1;
