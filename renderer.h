@@ -15,9 +15,11 @@ class Renderer {
 
  private:
   //declare pointer to window
-  SDL_Window *win;
+  SDL_Window *win = NULL;
   //declare pointer to a renderer
-  SDL_Renderer *renderer;
+  SDL_Renderer *renderer = NULL;
+  //declare point to a surface
+  SDL_Surface *surface = NULL;
 
   //declare coordinates
   const std::size_t screen_width;
