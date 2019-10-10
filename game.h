@@ -8,9 +8,12 @@ class Game {
  public:
   //constructor
   Game(std::size_t grid_width, std::size_t grid_height);
+  
+  void Run(Renderer &renderer);
+  void UpdateBackgroundColor();
 
  private:
-  int gameOver;
+  bool running;
 };
 
 #endif
