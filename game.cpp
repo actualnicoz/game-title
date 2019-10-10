@@ -12,5 +12,6 @@ void Game::Run(Renderer &renderer){
     renderer.UpdateWindowTitle();
     renderer.UpdateBackgroundColor();
     SDL_Delay(5000);
+    running = false;
   }
 }
