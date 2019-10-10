@@ -11,6 +11,7 @@ class Renderer {
   ~Renderer();
 
   void UpdateWindowTitle();
+  void UpdateBackgroundColor();
   
 
  private:
@@ -18,7 +19,7 @@ class Renderer {
   SDL_Window *win = NULL;
   //declare pointer to a renderer
   SDL_Renderer *renderer = NULL;
-  //declare point to a surface
+  //declare pointer to a surface
   SDL_Surface *surface = NULL;
 
   //declare coordinates
