@@ -9,8 +9,7 @@ int main(){
   constexpr std::size_t kGridHeight(32);
   
   Renderer renderer(kScreenWidth, kScreenHeight, kGridWidth, kGridHeight);
-  renderer.UpdateWindowTitle();
   Game game(kGridWidth, kGridHeight);
-  
+  game.Run(renderer);
   return 0;
 }
