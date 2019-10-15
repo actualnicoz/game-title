@@ -24,9 +24,10 @@ Renderer::~Renderer(){
   SDL_Quit();
 }
 
-void Renderer::UpdateWindowTitle(){
-  const char *title = "Kitty Corner";
-  SDL_SetWindowTitle(win, title);
+void Renderer::UpdateWindowTitle(int fps){
+  std::string title{std::to_string(fps)};
+  //const char *title = "Kitty Corner";
+  SDL_SetWindowTitle(win, title.c_str());
 }
 
 //update the background color

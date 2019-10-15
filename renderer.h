@@ -10,7 +10,7 @@ class Renderer {
   //destructor
   ~Renderer();
 
-  void UpdateWindowTitle();
+  void UpdateWindowTitle(int fps);
   void UpdateBackgroundColor();
   
 

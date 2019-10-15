@@ -9,7 +9,7 @@ class Game {
   //constructor
   Game(std::size_t grid_width, std::size_t grid_height);
   
-  void Run(Renderer &renderer);
+  void Run(Renderer &renderer, int kMsPerFrame);
   void UpdateBackgroundColor();
 
  private:
