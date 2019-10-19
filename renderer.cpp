@@ -36,3 +36,23 @@ void Renderer::UpdateBackgroundColor(){
   SDL_FillRect(surface, NULL, SDL_MapRGB(surface->format, 255, 255, 255));
   SDL_UpdateWindowSurface(win);
 }
+
+void Renderer::Render(){
+  SDL_Rect block;
+  block.w = screen_width / grid_width;
+  block.h = screen_height / grid_height;
+
+  //clear screen
+  SDL_SetRenderDrawColor(renderer, 0x1E, 0x1E, 0x1E, 0xFF);
+  SDL_RenderClear(renderer);
+
+  block.x = 10 * block.w;
+  block.y = 10 * block.h;
+
+  SDL_SetRenderDrawColor(renderer, 0xFF, 0x00, 0x00, 0xFF);
+
+  SDL_RenderFillRect(renderer, &block);
+
+  //update screen
+  SDL_RenderPresent(renderer);
+}

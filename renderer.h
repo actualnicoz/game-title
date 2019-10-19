@@ -12,6 +12,7 @@ class Renderer {
 
   void UpdateWindowTitle(int fps);
   void UpdateBackgroundColor();
+  void Render();
   
 
  private:
