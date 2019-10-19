@@ -16,8 +16,10 @@ void Game::Run(Renderer &renderer, int kMsPerFrame){
   bool running = true;
   while(running){
     frame_start = SDL_GetTicks();
-    
+
+    //updates title,fps, and score
     renderer.UpdateWindowTitle(frame_count);
+    //handles screen drawing
     renderer.Render();
 
     frame_end = SDL_GetTicks();
@@ -26,8 +28,6 @@ void Game::Run(Renderer &renderer, int kMsPerFrame){
     frame_duration = frame_end - frame_start;
     if(frame_end - title_timestamp >= 1000){
       renderer.UpdateWindowTitle(frame_count);
-      //renderer.UpdateBackgroundColor();
-      //renderer.Render();
       frame_count = 0;
       title_timestamp = frame_end;
     }
